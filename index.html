@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica de Operadores Lógicos JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="card-title">Práctica de Operadores Lógicos JavaScript</h1>
+            </div>
+            <div class="card-content">
+                <div id="quiz-container">
+                    <div class="quiz-info">
+                        <p class="question-counter">Pregunta <span id="current-question">1</span> de <span id="total-questions">11</span></p>
+                        <p class="difficulty">Dificultad: <span id="question-difficulty">Básico</span></p>
+                    </div>
+                    
+                    <div class="expression-container">
+                        <code id="expression"></code>
+                    </div>
+
+                    <div class="buttons-container">
+                        <button onclick="handleAnswer(true)" id="true-btn">true</button>
+                        <button onclick="handleAnswer(false)" id="false-btn">false</button>
+                    </div>
+
+                    <div id="explanation" class="explanation hidden">
+                        <p id="result-message"></p>
+                        <div class="explanation-content">
+                            <p class="explanation-title">Explicación paso a paso:</p>
+                            <div id="explanation-text"></div>
+                        </div>
+                    </div>
+
+                    <div class="next-button-container hidden" id="next-button-container">
+                        <button onclick="nextQuestion()" id="next-button">Siguiente pregunta</button>
+                    </div>
+
+                    <div class="score-container">
+                        <p>Puntuación actual: <span id="current-score">0</span> de <span id="questions-answered">0</span></p>
+                    </div>
+                </div>
+
+                <div id="results-container" class="hidden">
+                    <h3>¡Quiz completado!</h3>
+                    <p>Puntuación final: <span id="final-score">0</span> de <span id="total-questions-final">0</span></p>
+                    <button onclick="resetQuiz()">Intentar de nuevo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
